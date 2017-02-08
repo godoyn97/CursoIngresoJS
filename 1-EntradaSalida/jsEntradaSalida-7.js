@@ -86,8 +86,8 @@ function dividir()
 	resultado = datoUno % datoDos;
 
 	alert("el resultado de la division es: " + resultado);*/// ni idea de que salio mal
-	//perseIIIIIIIIIIIInt
-	//perseInt perseInt 
+	//parseIIIIIIIIIIIInt
+	//parseInt parseInt 
 }
 
 
