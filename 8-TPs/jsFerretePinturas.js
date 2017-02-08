@@ -4,7 +4,7 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 */
 function FahrenheitCentigrados () 
 {
-	
+	//como se ingresa numeros con coma?
 }
 
 function CentigradosFahrenheit () 
