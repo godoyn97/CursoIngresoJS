@@ -5,9 +5,29 @@ B.	Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en
 function FahrenheitCentigrados () 
 {
 	//como se ingresa numeros con coma?
+	var Ftemperatura;
+	var resta;
+	var resultado; 
+	var division;
+	Ftemperatura = document.getElementById('Temperatura').value;
+
+	//(f-32)*5/9
+	
+	//division = 9 % 5;
+	//division = parseInt(division);
+	/*Ftemperatura = parseInt(Ftemperatura);
+	resta = Ftemperatura - 32;
+	resultado = resta * division; */// es mal planteado
+
+
+	alert(resultado);
+
+
 }
 
 function CentigradosFahrenheit () 
 {
-	
+	//c(9/5 * C)+32
+	//273,15
+	var
 }

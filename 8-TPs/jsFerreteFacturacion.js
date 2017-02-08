@@ -34,7 +34,7 @@ function Sumar ()
 
 	resultado = datoUno + datoDos + datoTres;
 
-	alert("resultado"+resultado);
+	alert("resultado: "+resultado);
 }
 function Promedio () 
 {
@@ -74,21 +74,21 @@ function PrecioFinal ()
 	var datoTres;
 	var resultadoUno;
 	var resultadoDos;
-	var IVA;
+	//var IVA;
 
 	datoUno = document.getElementById('PrecioUno').value;
 	datoDos = document.getElementById('PrecioDos').value;
 	datoTres = document.getElementById('PrecioTres').value;
-	IVA = (2.21); // no me toma el decimal
+	//IVA = (2.21); // no me toma el decimal
 
 	datoUno= parseInt(datoUno);
 	datoDos= parseInt(datoDos);
 	datoTres=parseInt(datoTres);
-    IVA = parseInt(IVA);
+    //IVA = parseInt(IVA);
 	
-	resultadoUno= datoUno + datoTres + datoDos;
+	resultadoUno = datoUno + datoTres + datoDos;
 	
-	resultadoDos= resultadoUno * IVA;
+	resultadoDos = resultadoUno * 1.21;
 	//resultadoDos =(resultadoDos * IVA);
 
 	alert(resultadoDos);
