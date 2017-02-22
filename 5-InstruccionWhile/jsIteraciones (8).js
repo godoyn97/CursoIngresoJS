@@ -6,6 +6,7 @@ function Mostrar()
 	var negativo=1;
 	var numero;
 	var respuesta=true;
+	var sumaNega=0;
 
 	while(respuesta==true)
 	{
@@ -14,17 +15,20 @@ function Mostrar()
 
 		if(numero<0)
 		{
-			
+			negativo= negativo * numero;
 			//negativo = numero * numero;
 		}
-
+		else
+		{
+			positivo=positivo+numero;
+		}
 
 		
 		respuesta=confirm("desea continuar?")
 		contador++
 	}
 //funca
-
+// ahora si funca
 
 
 document.getElementById('suma').value=positivo;

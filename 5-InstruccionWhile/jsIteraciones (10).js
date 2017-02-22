@@ -1,18 +1,23 @@
 function Mostrar()
-{/*interacion hasta que el usuario quiera*/
+/*interacion hasta que el usuario quiera*/
 	//alert("funciona");
-	var respuesta="si";
+{	var respuesta="si";
 	var nota=0;
 	var contador=0;
-	var sumaNota;
+	var sumaNota=0;
 	var promedioNota;
 	var edad;
 	var nombre;
 	var sexo;
 	var masViejo=0;
-	var edadMasviejo;
+	var edadMasviejo=0;
 	var contadorMujer=0;
-
+	var contadorMujerAprob=0;
+	var contadorHombre25=0;
+	var notaMujerMax=0;
+	var nombreMujerMaxNota;
+	var notaHombreMax=0;
+	var nombreHombreMaxNota;
 
 
 	while(respuesta=="si")
@@ -26,10 +31,7 @@ function Mostrar()
 			nota=prompt("por favor ingrese su nota");
 			nota=parseInt(nota);
 		}
-
 		sumaNota= sumaNota + nota;
-
-		
 		edad=prompt("ingrese su edad: ");
 		edad =parseInt(edad);
 		while(edad<0 || edad>100)
@@ -41,9 +43,13 @@ function Mostrar()
 		nombre=prompt("ingrese su nombre: ");
 		
 		sexo=prompt("ingerse sexo (hombre/mujer)");
-		while()
+		while(sexo!= "hombre" && sexo!="mujer")
+		{
+			sexo=prompt("Reingrese Sexo (hombre/mujer)");
+		}
 
 		//aca termino la carga de validacionde datos
+
 		//comenzamos a hacer las operaciones necesarias
 		
 		if(contador==0)
@@ -56,34 +62,80 @@ function Mostrar()
 			if(edad>edadMasviejo)
 			{
 				masViejo=nombre;
-				edadMasviejo=edad;
-				
+				edadMasviejo=edad;	
 			}
+		}
+		 
 
-		
+		 
 			/*
-			1- cantidad de mujerers aprobadas
-			2-cantidad de hombres mayores a 25 aprobados
-			3- cantidad de mujeres menores a 20 años
-			4- el nombre de la mujer con mejor nota
-			5- el nombre del hombre
+			*1- cantidad de mujerers aprobadas
+			*2-cantidad de hombres mayores a 25 aprobados
+			*3- cantidad de mujeres menores a 20 años
+			*4- el nombre de la mujer con mejor nota
+			5- el nombre del hombre con mejor nota
 			6-promedio de notas de los hombre
 			7-pormedio de nota de la mujer
 			8-porcentajes de aprovados vs desaprobados
 			9-el sexo y el nombre de la primer persona que se saque 10
 			*/
+			//contador para mujeres y uno pa machos
+		if(contadorMujer==0	&&	sexo=="mujer")
+		{
+			nombreMujerMaxNota=nombre;
+			notaMujerMax=nota;
 
-					
-			
-			if(nota>4 && sexo=="mujer")
+		}
+		else
+		{//4
+			if(nota>notaMujerMax)
+			{
+				notaMujerMax=nota;
+				nombreMujerMaxNota=nombre;
+			}
+		}
+		while(sexo== "mujer" && sexo<20)
 			{
 				contadorMujer++;
 			}
-	
 
+
+			//3		
 			
 
-		}
+			//1
+			while(nota>4 && sexo=="mujer")
+			{
+				
+
+
+				contadorMujerAprob++;
+			}
+			
+			if(contador==0 && sexo=="hombre")
+			{
+
+			}
+
+
+			//2
+			while(nota>4 && sexo== "hombre" && edad>25)
+			{
+				contadorHombre25++;
+			}
+
+
+
+
+
+
+		}	
+		
+
+		
+		 
+
+		 
 
 
 
@@ -94,14 +146,52 @@ function Mostrar()
 
 
 
-		respuesta=prompt("ingrese si para continuar");
+		respuesta=prompt("ingresar otro dato?");
 	}
 
 	promedioNota =sumaNota/contador;
 
-	document.write(promedioNota);
+	document.write("promedio de la nota: " + promedioNota);
+	document.write("<br>" +"hombre aprobados con edad mayor a 25: "+ contadorHombre25);
+	document.write("<br>"+ "cantidad de mujeres aprobadas: "+ contadorMujerAprob);
+	document.write("<br>"+ "cantidad de mujeres menores a 20: "+ contadorMujer);
+	document.write("<br>" + "mujer con mejor nota: " + notaMujerMax + " " + nombreMujerMaxNota);
+}
 
-}//fin de la funcion 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+"banderas"
+if(nombre1er10=="")
+
+
+
+
+*/
+
+
+
+
+//fin de la funcion 0
 	/*var contador=0;
 	//declarar contadores y variables 
 	var numero;
